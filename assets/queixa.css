@@ -131,6 +131,18 @@ footer { padding: 40px 0; border-top: 1px solid var(--line); }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
+/* Vídeo de resultado */
+.video-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 64px; align-items: center; max-width: 920px; margin-inline: auto; }
+.video-frame { position: relative; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); background: var(--sand); aspect-ratio: 9/16; }
+.video-frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.video-text h2 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 16px; }
+.video-text p { color: var(--muted); margin-bottom: 16px; }
+.video-text .note { font-size: .82rem; }
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .video-frame { max-width: 340px; margin-inline: auto; }
+}
+
 @media (max-width: 900px) {
   .nav { display: none; }
   .hero { padding: 140px 0 80px; }
